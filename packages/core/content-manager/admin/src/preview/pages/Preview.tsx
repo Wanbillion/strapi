@@ -1,15 +1,18 @@
 import * as React from 'react';
 
 import { Page, useQueryParams, useRBAC, createContext } from '@strapi/admin/strapi-admin';
-import { Box, Flex, FocusTrap, Portal } from '@strapi/design-system';
+import { Box, Flex, FocusTrap, Grid, Portal } from '@strapi/design-system';
 import { useIntl } from 'react-intl';
 import { useParams } from 'react-router-dom';
 
 import { GetPreviewUrl } from '../../../../shared/contracts/preview';
+
 import { COLLECTION_TYPES } from '../../constants/collections';
+import { PERMISSIONS } from '../../constants/plugin';
 import { DocumentRBAC } from '../../features/DocumentRBAC';
 import { type UseDocument, useDocument } from '../../hooks/useDocument';
 import { useDocumentLayout } from '../../hooks/useDocumentLayout';
+import { Form } from '../../pages/EditView/components/Form';
 import { buildValidParams } from '../../utils/api';
 import { PreviewContent } from '../components/PreviewContent';
 import { PreviewHeader } from '../components/PreviewHeader';
@@ -131,7 +134,14 @@ const PreviewPage = () => {
       >
         <Flex direction="column" height="100%" alignItems={'stretch'}>
           <PreviewHeader />
-          <PreviewContent />
+          <Grid.Root height="100%" overflow="auto">
+            <Grid.Item col={6}>
+              <Form status="draft" slug={model} />
+            </Grid.Item>
+            <Grid.Item col={6}>
+              <PreviewContent />
+            </Grid.Item>
+          </Grid.Root>
         </Flex>
       </PreviewProvider>
     </>
@@ -146,11 +156,11 @@ const ProtectedPreviewPageImpl = () => {
   const { slug: model } = useParams<{
     slug: string;
   }>();
-  const {
-    permissions = [],
-    isLoading,
-    error,
-  } = useRBAC([{ action: 'plugin::content-manager.explorer.read', subject: model }]);
+  const perms = PERMISSIONS.map((action) => ({
+    action,
+    subject: model,
+  }));
+  const { permissions = [], isLoading, error } = useRBAC(perms);
 
   if (isLoading) {
     return <Page.Loading />;
