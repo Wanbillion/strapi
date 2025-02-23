@@ -114,7 +114,7 @@
     "@strapi/content-manager": "5.8.0",
     "@strapi/content-releases": "5.8.0",
     "@strapi/content-type-builder": "5.8.0",
-    "@strapi/core": "5.8.0",
+    "@strapi/core": "5.10.3",
     "@strapi/data-transfer": "5.8.0",
     "@strapi/database": "5.8.0",
     "@strapi/email": "5.8.0",
