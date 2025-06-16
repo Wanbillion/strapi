@@ -15,8 +15,8 @@
   "dependencies": {
     "@strapi/provider-email-mailgun": "workspace:*",
     "@strapi/provider-upload-aws-s3": "workspace:*",
-    "@strapi/provider-upload-cloudinary": "workspace:*",
-    "@strapi/strapi": "workspace:*",
+    "@strapi/provider-upload-cloudinary": "4.0.0",
+    "@strapi/strapi": "4.0.0",
     "better-sqlite3": "11.3.0",
     "lodash": "4.17.21",
     "mysql2": "3.9.8",
