@@ -55,7 +55,7 @@
     "@koa/cors": "5.0.0",
     "@strapi/design-system": "2.0.0-rc.14",
     "@strapi/icons": "2.0.0-rc.14",
-    "@strapi/utils": "5.8.0",
+    "@strapi/utils": "4.10.6",
     "graphql": "^16.8.1",
     "graphql-depth-limit": "^1.1.0",
     "graphql-playground-middleware-koa": "^1.6.21",
