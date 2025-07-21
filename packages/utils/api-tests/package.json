@@ -6,6 +6,6 @@
     "dotenv": "16.4.5",
     "lodash": "4.17.21",
     "qs": "6.11.1",
-    "supertest": "6.3.3"
+    "supertest": "7.1.3"
   }
 }
