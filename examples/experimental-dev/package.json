@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "@strapi/plugin-users-permissions": "workspace:*",
-    "@strapi/strapi": "workspace:*",
+    "@strapi/strapi": "5.0.0",
     "better-sqlite3": "11.3.0",
     "react": "rc",
     "react-dom": "rc",
