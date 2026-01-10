@@ -14,12 +14,12 @@
     "strapi": "strapi"
   },
   "dependencies": {
-    "@strapi/plugin-users-permissions": "workspace:*",
-    "@strapi/strapi": "workspace:*",
+    "@strapi/plugin-users-permissions": "4.0.0",
+    "@strapi/strapi": "4.19.0",
     "better-sqlite3": "11.3.0",
     "react": "rc",
     "react-dom": "rc",
-    "react-router-dom": "6.22.3",
+    "react-router-dom": "7.0.0",
     "styled-components": "6.1.8"
   },
   "engines": {
