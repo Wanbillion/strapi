@@ -58,7 +58,7 @@
     "@strapi/database": "5.8.0",
     "@strapi/design-system": "2.0.0-rc.14",
     "@strapi/icons": "2.0.0-rc.14",
-    "@strapi/types": "5.8.0",
+    "@strapi/types": "0.0.0",
     "@strapi/utils": "5.8.0",
     "date-fns": "2.30.0",
     "date-fns-tz": "2.0.1",
