@@ -15,10 +15,10 @@
   "dependencies": {
     "@strapi/provider-email-mailgun": "workspace:*",
     "@strapi/provider-upload-aws-s3": "workspace:*",
-    "@strapi/provider-upload-cloudinary": "workspace:*",
-    "@strapi/strapi": "workspace:*",
+    "@strapi/provider-upload-cloudinary": "4.0.0",
+    "@strapi/strapi": "4.5.6",
     "better-sqlite3": "11.3.0",
-    "lodash": "4.17.21",
+    "lodash": "4.17.23",
     "mysql2": "3.9.8",
     "passport-google-oauth2": "0.2.0",
     "pg": "8.11.1",
